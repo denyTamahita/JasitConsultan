@@ -69,7 +69,8 @@ export default function FAQPage() {
   const [expandedItems, setExpandedItems] = useState<{[key: string]: boolean}>({});
   
   // Get unique categories
-  const categories = ['semua', ...new Set(faqs.map(faq => faq.category))];
+  const uniqueCategories = Array.from(new Set(faqs.map(faq => faq.category)));
+  const categories = ['semua', ...uniqueCategories];
   
   // Filter FAQs based on active category
   const filteredFAQs = activeCategory === 'semua' 
