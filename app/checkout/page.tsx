@@ -28,7 +28,7 @@ export default function CheckoutPage() {
         const currentUser = await getCurrentUser();
         setUser(currentUser);
         if (currentUser?.email) {
-          setFormData(prev => ({ ...prev, email: currentUser.email }));
+          setFormData(prev => ({ ...prev, email: currentUser.email || '' }));
         }
       } catch (error) {
         console.error('Error loading user:', error);
