@@ -1,0 +1,28 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NETLIFY_NEXT_PLUGIN_SKIP = "false"
+  NEXT_PUBLIC_SUPABASE_URL = "https://hvkbzhwvnwhgtvivdzpt.supabase.co"
+  NEXT_PUBLIC_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh2a2J6aHd2bndoZ3R2aXZkenB0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTI0NjIyMTksImV4cCI6MjA2ODAzODIxOX0.uN-Pzq1jo1BNtsA8JQnJHiBh9lObsJZoiEo6GleArNA"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Pengaturan untuk menangani routing Next.js
+[[redirects]]
+  from = "/_next/*"
+  to = "/_next/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/api/*"
+  to = "/api/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false

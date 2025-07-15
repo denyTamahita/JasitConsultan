@@ -1,0 +1,43 @@
+Buatkan saya aplikasi e-commerce berbasis web dengan stack sebagai berikut:
+
+Frontend: Next.js
+
+Backend & Database: Supabase (untuk database produk, auth user, dan storage gambar)
+
+Hosting: Vercel
+
+Fitur yang harus ada:
+
+Halaman utama dengan daftar produk
+
+Halaman detail produk
+
+Login dan registrasi pengguna menggunakan Supabase Auth
+
+Keranjang belanja (disimpan di localStorage atau state)
+
+Halaman checkout sederhana (tanpa integrasi pembayaran dulu)
+
+Admin bisa menambahkan produk (bisa via form atau langsung lewat Supabase dashboard)
+
+Instruksi yang saya butuhkan:
+
+Struktur folder dan file
+
+Kode lengkap untuk semua halaman
+
+Instruksi instalasi lokal (npm install, env, dsb)
+
+Instruksi upload ke Vercel
+
+Jika perlu, instruksi setup Supabase (tabel produk, auth, dll)
+
+Semua harus menggunakan layanan gratis (Supabase free tier & Vercel free tier).
+
+Tambahkan juga:
+
+Styling sederhana (boleh pakai Tailwind CSS)
+
+Penjelasan singkat untuk tiap file utama
+
+Output akhir: Aplikasi siap dijalankan secara lokal dan bisa langsung di-deploy ke Vercel.
