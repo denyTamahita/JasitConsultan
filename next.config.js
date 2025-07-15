@@ -3,10 +3,11 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: ['localhost', 'xsgames.co', 'placehold.co'],
-    // Tidak perlu unoptimized: true di Vercel
+    unoptimized: true, // Diperlukan untuk static export
   },
-  // Tidak perlu output: 'export' di Vercel
-  // Vercel mendukung semua fitur Next.js secara native
+  output: 'export', // Diperlukan untuk GitHub Pages
+  // Konfigurasi ini hanya untuk GitHub Pages deployment
+  // Untuk Vercel, hapus output: 'export' dan unoptimized: true
 }
 
 module.exports = nextConfig
