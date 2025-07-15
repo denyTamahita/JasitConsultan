@@ -25,7 +25,8 @@ export default function ProductsPage() {
     fetchProducts();
   }, []);
   
-  const categories = ['all', ...new Set(products.map(product => product.category))];
+  const uniqueCategories = Array.from(new Set(products.map(product => product.category)));
+  const categories = ['all', ...uniqueCategories];
   
   const filteredProducts = filter === 'all' 
     ? products 
